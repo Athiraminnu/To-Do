@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+        <div class="card text-black bg-white mb-3" style= "width: 25rem; height: 14rem;">
+                <div class="card-title">
+                    UPDATE
+                    <div class="card-body">
+                        <form method="post">
+                            {% csrf_token %}
+                            {{form.as_p}}
+                            <button class="btn btn-warning" type="submit">confirm</button>
+                        </form>
+                    </div>
+                </div>
+        </div>
+</div>
+{% endblock%}

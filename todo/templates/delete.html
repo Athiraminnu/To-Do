@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="card text-black bg-white" style="width: 25rem; height: 14rem;">
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                <p> ARE YOU SURE YOU WANT TO DELETE? </p>
+                <button class="btn btn-danger" type="submit">confirm</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+                <div class="card text-black bg-warning mb-3" style="width: 20rem; height: 14rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{variable.name}}</h5><br>
+                        <h6 class="card-subtitle mb-2 text-black">{{variable.priority}}</h6><br>
+                        <h6 class="card-subtitle mb-2 text-black">{{variable.date}}</h6><br>
+                        <a href="{% url 'delete' variable.id %}" class="btn btn-danger">Done</a>
+                        <a href="{% url 'update' variable.id %}" class="btn btn-primary">Update</a><br>
+                    </div>
+                </div>
+
+{% endblock %}
